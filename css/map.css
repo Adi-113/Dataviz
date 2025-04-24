@@ -1,0 +1,37 @@
+#chloromap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+  position: relative;
+}
+.tooltip {
+  position: absolute;
+  background-color: white;
+  border: 1px solid gray;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 13px;
+  pointer-events: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.legend {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  background: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+.legend-bar {
+  height: 10px;
+  width: 200px;
+  background: linear-gradient(to right, #00ff00, #ffff00, #ff0000);
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+}

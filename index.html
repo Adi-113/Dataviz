@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mental Health Sankey Diagram</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+    <link rel="stylesheet" href="css/map.css" />
+    <link rel="stylesheet" href="css/sankey.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div>
+      <header><h1>Mental Health Assessment</h1></header>
+    </div>
+    <div class="controls">
+      <label for="occupationSelect"><strong>Select Occupation:</strong></label
+      ><br />
+      <select id="occupationSelect"></select>
+    </div>
+    <div id="chloromap">
+      <svg id="map" width="960" height="600"></svg>
+
+      <!-- Legend -->
+      <div class="legend">
+        <div class="legend-bar"></div>
+        <div style="display: flex; justify-content: space-between">
+          <span>0%</span>
+          <span>25%</span>
+          <span>50%</span>
+        </div>
+      </div>
+      <div class="tooltip" id="tooltip"></div>
+    </div>
+    <div id="sankey">
+      <div id="chart"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/controls.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/sankey.js"></script>
+  </body>
+</html>
