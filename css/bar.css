@@ -1,0 +1,61 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    padding: 50px;
+    color: #333;
+  }
+  
+  .container {
+    width: 850px;
+    margin: auto;
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    text-align: center;
+  }
+  
+  h1 {
+    color: #444;
+  }
+  
+  select {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    margin-bottom: 20px;
+  }
+  
+  .bar {
+    transition: fill-opacity 0.3s, transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .bar:hover {
+    fill-opacity: 0.9;
+    transform: scaleY(1.05);
+  }
+  
+  .axis text {
+    font-size: 12px;
+  }
+  
+  .legend rect {
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  
+  .tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    border-radius: 6px;
+    pointer-events: none;
+    opacity: 0;
+  }
+  
+  
