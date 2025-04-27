@@ -1,126 +1,89 @@
-(() => {
-  console.log("hello");
-  const width = 500;
-  const height = 500;
-  const radius = Math.min(width, height) / 2;
+const stressTypes = ["Yes", "No", "Maybe"];
+const colors = { "Yes": "orange", "No": "darkblue", "Maybe": "cornflowerblue" };
 
-  const svg = d3
-    .select("#pie")
-    .append("svg")
-    .attr("width", width)
-    .attr("height", height)
-    .append("g")
-    .attr("transform", `translate(${width / 2},${height / 2})`);
+const svg = d3.select("#pie"),
+      margin = {top: 60, right: 60, bottom: 60, left: 60},
+      width = +svg.attr("width") - margin.left - margin.right,
+      height = +svg.attr("height") - margin.top - margin.bottom,
+      radius = Math.min(width, height) / 2,
+      chart = svg.append("g").attr("transform", `translate(${width / 2 + margin.left / 2},${height / 2 + margin.top / 2})`);
 
-  const color = d3
-    .scaleOrdinal()
-    .domain(["Yes", "No", "Maybe"])
-    .range(["#5cb85c", "#f0ad4e", "#5bc0de"]);
+d3.csv("final_data.csv").then(fullData => {
+  const occupations = Array.from(new Set(fullData.map(d => d.Occupation).filter(Boolean)));
+  const select = d3.select("#occupationSelect");
 
-  const tooltip = d3
-    .select("body")
-    .append("div")
-    .attr("class", "tooltip")
-    .style("opacity", 0);
+  select.selectAll("option")
+    .data(occupations)
+    .enter()
+    .append("option")
+    .attr("value", d => d)
+    .text(d => d);
 
-  let rawData;
+  select.on("change", () => updateChart(select.node().value));
+  updateChart(occupations[0]);
 
-  const dropdown = document.querySelector("#occupationSelect");
-  document.addEventListener("DOMContentLoaded", () => {
-    const selectedOccupation = dropdown.value;
-    console.log(selectedOccupation);
-    drawChart(selectedOccupation);
-  });
+  function updateChart(selectedOccupation) {
+    const filtered = fullData.filter(d => d.Occupation === selectedOccupation);
 
-  // Initialize the pie chart
-  d3.csv("final_data.csv").then((data) => {
-    rawData = data;
+    const counts = stressTypes.map(stress => ({
+      stress,
+      value: filtered.filter(d => d.Growing_Stress === stress).length
+    }));
 
-    // Get unique occupations and populate the dropdown
-    const occupations = [...new Set(data.map((d) => d.Occupation))];
-    const dropdown = d3.select("#occupationSelect");
+    const pie = d3.pie()
+      .sort(null)
+      .value(d => d.value);
 
-    // Clear existing options
-    dropdown.selectAll("option").remove();
-
-    // Add default option
-    // dropdown.append("option").attr("value", "").text("--Select Occupation--");
-
-    // Add occupation options
-    occupations.forEach((occ) => {
-      dropdown.append("option").attr("value", occ).text(occ);
-    });
-
-    // Add change event listener
-    // dropdown.on("change", function () {
-    //   const selectedOccupation = this.value;
-    //   if (selectedOccupation) {
-    //     drawChart(selectedOccupation);
-    //   } else {
-    //     // Clear the chart if no occupation is selected
-    //     svg.selectAll("*").remove();
-    //   }
-    // });
-  });
-
-  function drawChart(selectedOccupation) {
-    // Clear previous chart
-    svg.selectAll("*").remove();
-
-    const filtered = rawData.filter((d) => d.Occupation === selectedOccupation);
-    const counts = d3.rollups(
-      filtered,
-      (v) => v.length,
-      (d) => d.Growing_Stress
-    );
-
-    const pie = d3.pie().value((d) => d[1]);
-
-    const arc = d3
-      .arc()
+    const arc = d3.arc()
       .innerRadius(0)
-      .outerRadius(radius - 10);
+      .outerRadius(radius);
 
-    const arcs = svg
-      .selectAll("path")
+    chart.selectAll("*").remove();
+
+    chart.selectAll('path')
       .data(pie(counts))
       .enter()
-      .append("path")
-      .attr("d", arc)
-      .attr("fill", (d) => color(d.data[0]))
+      .append('path')
+      .attr('d', arc)
+      .attr('fill', d => colors[d.data.stress])
       .attr("stroke", "white")
-      .attr("stroke-width", 2)
-      .on("mouseover", function (event, d) {
-        tooltip.transition().duration(200).style("opacity", 1);
-        tooltip
-          .html(`<strong>${d.data[0]}</strong><br>Count: ${d.data[1]}`)
-          .style("left", event.pageX + 10 + "px")
-          .style("top", event.pageY - 20 + "px");
-      })
-      .on("mouseout", function () {
-        tooltip.transition().duration(500).style("opacity", 0);
-      });
+      .style("stroke-width", "2px");
 
     // Add labels
-    svg
-      .selectAll("text")
+    chart.selectAll('text')
       .data(pie(counts))
       .enter()
-      .append("text")
-      .attr("transform", (d) => `translate(${arc.centroid(d)})`)
-      .attr("text-anchor", "middle")
-      .attr("font-size", "14px")
-      .attr("fill", "white")
-      .text((d) => `${d.data[0]}: ${d.data[1]}`);
+      .append('text')
+      .text(d => d.data.value > 0 ? `${d.data.stress}: ${((d.data.value / d3.sum(counts, d => d.value)) * 100).toFixed(1)}%` : "")
+      .attr("transform", d => `translate(${arc.centroid(d)})`)
+      .style("text-anchor", "middle")
+      .style("font-size", "14px");
 
-    // Add title
-    svg
-      .append("text")
-      .attr("x", 0)
-      .attr("y", -height / 2 + 20)
+    // Title
+    svg.selectAll(".title").remove();
+    svg.append("text")
+      .attr("class", "title")
+      .attr("x", (width + margin.left + margin.right) / 2)
+      .attr("y", margin.top / 2)
       .attr("text-anchor", "middle")
-      .style("font-size", "16px")
-      .style("font-weight", "bold")
-      .text(`Growing Stress Distribution for ${selectedOccupation}`);
+      .style("font-size", "18px")
+      .text(`Stress Distribution for Occupation: ${selectedOccupation}`);
+    
+    // Legend
+    const legend = svg.append("g")
+      .attr("transform", `translate(${width + margin.left - 50},${margin.top + 20})`);
+
+    stressTypes.forEach((stress, i) => {
+      const g = legend.append("g").attr("transform", `translate(0,${i * 25})`);
+      g.append("rect")
+        .attr("width", 18)
+        .attr("height", 18)
+        .attr("fill", colors[stress]);
+      g.append("text")
+        .attr("x", 25)
+        .attr("y", 14)
+        .text(stress)
+        .style("font-size", "14px");
+    });
   }
-})();
+});
