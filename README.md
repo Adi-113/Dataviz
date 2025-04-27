@@ -1,4 +1,3 @@
-
 # Mental Health Assessment
 
 **Authors:**  
@@ -96,6 +95,32 @@ Overall, the findings highlight that mental health support and interventions sho
 
 
 https://github.com/user-attachments/assets/83adc1a3-c72a-4645-b2d5-40daa0e6ccea
+
+### 🔀 Sankey Diagram: Mental Health Service Utilization Based on Family History
+
+Use our interactive Sankey diagram to explore how family mental health history influences the utilization of mental health services. Users can visually follow the flow from **Family History** responses (**"Yes"** or **"No"**) to **Treatment** decisions (**"Yes"** or **"No"**) and finally to different **Care Options** (**"Yes," "No," or "Not Sure"**). The Sankey diagram dynamically updates based on the flows, with thicker paths representing larger groups of individuals at each stage.
+
+The visualization shows three stages:
+- **Family History**: Whether individuals report a family history of mental health issues.
+- **Treatment**: Whether they sought treatment based on their background.
+- **Care Options**: The availability and choice of care options.
+
+Color coding helps distinguish different transitions:
+- Lighter shades represent treatment-seeking behavior.
+- Distinct colors differentiate final care options (Yes, No, Not Sure).
+
+This visualization highlights how individuals with a family history are more likely to seek treatment and explore available care options, while those without a family history are more likely to avoid treatment or remain unsure about available care.
+
+overall,the graph show that individuals with a family history of mental health issues are more likely to seek treatment and explore available care options. This emphasizes the critical role family background plays in influencing mental health service utilization.
+
+
+
+https://github.com/user-attachments/assets/6a91af22-a36d-4a1c-bd43-8c951716adca
+
+
+
+
+
 
 
  
