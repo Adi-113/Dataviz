@@ -18,9 +18,12 @@ This project, **"Mental Health Assessment"** examines survey data from people ar
 
 <ins> **_Step 3:_**</ins>  To start the application, navigate to the folder containing the `index.html` file, double-click it to open in your default web browser, and you should see your project with a blue circle rendered on the page.
 
-<ins> **_Step 4:_**</ins>  To start the application, navigate to the folder containing the `index.html` file, double-click it to open in your default web browser, and you should see your project with a blue circle rendered on the page.
+<ins> **_Step 4:_**</ins>  The visualizations will load automatically, allowing you to interact with the charts through dropdown menus, hover effects, and clickable elements to explore various aspects of the mental health survey data. No additional setup is required — simply open, explore, and uncover insights!
+
+## Overview of the Visualizations
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjYxNDI4NzUsLTQyNzkzNjA3OV19
+eyJoaXN0b3J5IjpbNjMzMzk4NzU5LC00Mjc5MzYwNzldfQ==
 -->
