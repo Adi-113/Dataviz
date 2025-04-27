@@ -16,9 +16,11 @@ This project, **"Mental Health Assessment"** examines survey data from people ar
 
 <ins> **_Step 2:_**</ins>  If you have downloaded the zip file, extract all the necessary files into a designated folder on your system.
 
-<ins> **_Step 3:_**</ins>  If you have downloaded the zip file, extract all the necessary files into a designated folder on your system.
+<ins> **_Step 3:_**</ins>  To start the application, navigate to the folder containing the `index.html` file, double-click it to open in your default web browser, and you should see your project with a blue circle rendered on the page.
+
+<ins> **_Step 4:_**</ins>  To start the application, navigate to the folder containing the `index.html` file, double-click it to open in your default web browser, and you should see your project with a blue circle rendered on the page.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM4MTY1NjgsLTQyNzkzNjA3OV19
+eyJoaXN0b3J5IjpbLTE1NjYxNDI4NzUsLTQyNzkzNjA3OV19
 -->
