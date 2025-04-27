@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/map.css" />
     <link rel="stylesheet" href="css/sankey.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/pie.css" />
+    <link rel="stylesheet" href="css/bar.css" />
   </head>
   <body>
     <div>
@@ -34,6 +36,23 @@
       </div>
       <div class="tooltip" id="tooltip"></div>
     </div>
+    <div id="piechart">
+      <div id="pie"></div>
+    </div>
+    
+    <div id="barchart">
+      <h1>Mental Health Analysis</h1>
+      <label for="mentalHealthSelect">Mental Health History:</label>
+      <select id="mentalHealthSelect">
+          <option value="">--Select--</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="Maybe">Maybe</option>
+      </select>
+
+      <div id="bar"></div>
+
+</div>
     <div id="sankey">
       <div id="chart"></div>
     </div>
@@ -42,5 +61,7 @@
     <script src="js/controls.js"></script>
     <script src="js/map.js"></script>
     <script src="js/sankey.js"></script>
+    <script src="js/bar.js"></script>
+    <script src="js/pie.js"></script>
   </body>
 </html>

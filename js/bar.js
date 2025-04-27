@@ -5,13 +5,13 @@ selectMenu.addEventListener('change', function () {
 });
 
 function visualize(selection) {
-    d3.select("#chart").html("");
+    d3.select("#bar").html("");
 
     const margin = { top: 60, right: 30, bottom: 50, left: 60 },
         width = 750 - margin.left - margin.right,
         height = 450 - margin.top - margin.bottom;
 
-    const svg = d3.select("#chart")
+    const svg = d3.select("#bar")
         .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
