@@ -22,8 +22,29 @@ This project, **"Mental Health Assessment"** examines survey data from people ar
 
 ## Overview of the Visualizations
 
+To explore the data, we have created four visualizations:
 
+### 1. Choropleth Map
+
+- Displays the percentage of individuals experiencing increasing stress, categorized by occupation.
+- Helps identify which industries are most affected by stress.
+
+### 2. Pie Chart
+
+- Illustrates the relationship between growing stress and days spent indoors, segmented by occupation.
+- Offers insights into how time spent indoors correlates with rising stress levels.
+
+### 3. Clustered Bar Chart
+
+- Examines how individuals with stress and a mental health history are coping.
+- Focuses on their struggles with coping mechanisms, work engagement, and social challenges.
+
+### 4. Sankey Diagram
+
+- Visualizes the connection between family history of mental health issues, treatment seeking, and available care options.
+- Shows how family history impacts the decision to seek help and access care.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjMzMzk4NzU5LC00Mjc5MzYwNzldfQ==
+eyJoaXN0b3J5IjpbOTg4NTczMTc1LDYzMzM5ODc1OSwtNDI3OT
+M2MDc5XX0=
 -->
