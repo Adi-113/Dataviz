@@ -12,10 +12,10 @@ This project, **"Mental Health Assessment"** examines survey data from people ar
 
 ## How to run the application ?
 
-<ins> **_Step 1:_**</ins>  Download the project folder from the submission or `git clone` the repository [Dataviz](https://github.com/Adi-113/Dataviz) into your local system.
+<ins> **_Step 1:_**</ins>  Download the project zip file from the submission or `git clone` the repository [Dataviz](https://github.com/Adi-113/Dataviz) into your local system.
 
-<ins> **_Step 2:_**</ins>  
+<ins> **_Step 2:_**</ins>  If downloaded the zip file , extract all the required files into a proper folder in your system 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxMDg2NTY0OSwtNDI3OTM2MDc5XX0=
+eyJoaXN0b3J5IjpbNzgwMDQ1NTI1LC00Mjc5MzYwNzldfQ==
 -->
