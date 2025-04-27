@@ -45,6 +45,21 @@ To explore the data, we have created four visualizations:
 - Shows how family history impacts the decision to seek help and access care.
 
 ## How to interpret the Visualizations?
+## 🌍 Choropleth Map: Growing Stress Levels Across Occupations
+
+Use our interactive map to explore growing stress levels across countries based on different occupations. 
+
+Use the dropdown menu at the top left to select an occupation, such as **Business**, **Corporate**, **Housewife**, **Student**, or **Others**. Based on the selected group, the map will automatically update to visualize the percentage of individuals reporting growing stress in each country.
+
+A color gradient is applied to the map:
+- **Green** → Low stress levels (around 0%)
+- **Yellow** → Moderate stress levels (approximately 25%)
+- **Orange to Red** → High stress levels (up to 50%)
+
+Darker shades highlight countries where stress levels are more severe within the selected occupation, while lighter shades show regions with lower reported stress.
+
+Overall, the findings highlight that while formal professional sectors like business, corporate jobs, and student populations are heavily affected by stress, mental health awareness is necessary across all occupations to address hidden or emerging stress patterns globally.
+
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbMzExOTY1MzY2LDk4ODU3MzE3NSwtNzE0ND
 Y4MTQ1LDczMDk5ODExNl19
