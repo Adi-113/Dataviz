@@ -12,7 +12,7 @@ This project, **"Mental Health Assessment"** examines survey data from people ar
 
 ## How to run the application ?
 
-
+_Step 1:_
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyNzkzNjA3OV19
+eyJoaXN0b3J5IjpbMTM1NDIzNzQxMCwtNDI3OTM2MDc5XX0=
 -->
