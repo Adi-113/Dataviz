@@ -44,8 +44,8 @@ To explore the data, we have created four visualizations:
 - Visualizes the connection between family history of mental health issues, treatment seeking, and available care options.
 - Shows how family history impacts the decision to seek help and access care.
 
-## How to interpret th
+## How to interpret the Visualizations?
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MzEyNzQ1LDk4ODU3MzE3NSwtNzE0ND
+eyJoaXN0b3J5IjpbMzExOTY1MzY2LDk4ODU3MzE3NSwtNzE0ND
 Y4MTQ1LDczMDk5ODExNl19
 -->
