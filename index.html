@@ -10,21 +10,28 @@
     <link rel="stylesheet" href="css/map.css" />
     <link rel="stylesheet" href="css/sankey.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/pie.css" />
+    <link rel="stylesheet" href="css/bar.css" />
   </head>
   <body>
-    <div>
-      <header><h1>Mental Health Assessment</h1></header>
-    </div>
+    <header>
+      <h1>Mental Health Assessment Dashboard</h1>
+      
+    </header>
+  
     <div class="controls">
-      <label for="occupationSelect"><strong>Select Occupation:</strong></label
-      ><br />
+      <label for="occupationSelect"><strong>Select Occupation:</strong></label><br />
       <select id="occupationSelect"></select>
     </div>
+  
+    <!-- Choropleth Map -->
     <div id="chloromap">
-      <svg id="map" width="960" height="600"></svg>
-
+      <h1 style="margin-top: 10px; margin-right: -20px;">Global Stress %</h1>
+      <svg id="map" width="1000" height="600" style="margin-right: 20px;"></svg>
+  
       <!-- Legend -->
       <div class="legend">
+        <div style="font-weight: bold; text-align: center; margin-bottom: 2px;">Stress %</div>
         <div class="legend-bar"></div>
         <div style="display: flex; justify-content: space-between">
           <span>0%</span>
@@ -34,13 +41,50 @@
       </div>
       <div class="tooltip" id="tooltip"></div>
     </div>
+  
+    <!-- Pie and Bar Chart side-by-side -->
+    <div class="dashboard">
+  
+      <!-- Pie Chart -->
+      <div class="dashboard-section small-chart" id="piechart">
+        <h1>Growing Stress vs Staying Indoors</h1>
+        <label for="daysIndoorsSelect"><strong>Days Indoors:</strong></label><br />
+        <select id="daysIndoorsSelect">
+          <option value="">All</option>
+        </select>
+    
+        <div class="chart-container">
+          <svg id="pie" width="250" height="250" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet"></svg>
+        </div>
+      </div>
+    
+      <!-- Bar Chart -->
+      <div class="dashboard-section large-chart" id="barchart">
+        <h1>Impact of Mental Health History with Life Challenges</h1>
+        <label for="mentalHealthSelect"><strong>Mental Health History:</strong></label><br />
+        <select id="mentalHealthSelect">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="Maybe">Maybe</option>
+        </select>
+    
+        <div class="chart-container">
+          <svg id="bar" width="900" height="400" viewBox="0 0 900 400" preserveAspectRatio="xMidYMid meet"></svg>
+        </div>
+      </div>
+    
+    </div>
+    <!-- Sankey Diagram -->
     <div id="sankey">
+      <h1>Mental Health Service Utilization Patterns Based on Family Background</h1>
       <div id="chart"></div>
     </div>
-
+  
     <!-- Scripts -->
-    <script src="js/controls.js"></script>
-    <script src="js/map.js"></script>
-    <script src="js/sankey.js"></script>
+    <script defer src="js/controls.js"></script>
+    <script defer src="js/map.js"></script>
+    <script defer src="js/bar.js"></script>
+    <script defer src="js/pie.js"></script>
+    <script defer src="js/sankey.js"></script>
   </body>
 </html>

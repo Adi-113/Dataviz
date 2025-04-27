@@ -1,24 +1,4 @@
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
-    padding: 50px;
-    color: #333;
-  }
-  
-  .container {
-    width: 850px;
-    margin: auto;
-    background-color: white;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    text-align: center;
-  }
-  
-  h1 {
-    color: #444;
-  }
-  
+
   select {
     padding: 8px;
     font-size: 16px;
