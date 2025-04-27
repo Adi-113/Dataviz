@@ -60,7 +60,8 @@ Darker shades highlight countries where stress levels are more severe within the
 
 Overall, the findings highlight that while formal professional sectors like business, corporate jobs, and student populations are heavily affected by stress, mental health awareness is necessary across all occupations to address hidden or emerging stress patterns globally.
 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzgyNjg4MTUzLDMxMTk2NTM2Niw5ODg1Nz
-MxNzUsLTcxNDQ2ODE0NSw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTE3MTczNDMzNTMsMzExOTY1MzY2LDk4OD
+U3MzE3NSwtNzE0NDY4MTQ1LDczMDk5ODExNl19
 -->
