@@ -123,13 +123,35 @@ d3.csv('final_data.csv').then((data) => {
 
     node
       .append('text')
-      .attr('x', (d) => (d.x0 < width / 2 ? sankey.nodeWidth() + 6 : -6))
+      .attr('x', (d) => (d.x0 < width / 2 ? sankey.nodeWidth() + 10 : -10))
       .attr('y', (d) => (d.y1 - d.y0) / 2)
       .attr('dy', '0.35em')
       .attr('text-anchor', (d) => (d.x0 < width / 2 ? 'start' : 'end'))
-      .text((d) => d.name)
-      .style('font-size', '10px')
-      .style('font-family', 'Arial');
+      .text((d) => {
+        const [category, value] = d.name.split(': ');
+        const formattedCategory = category
+          .split('_')
+          .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(' ');
+        return `${formattedCategory}: ${value}`;
+      })
+      .style('font-size', '12px')
+      .style('font-weight', 'bold')
+      .style('font-family', 'Arial')
+      .style('fill', '#333')
+      .each(function(d) {
+        const bbox = this.getBBox();
+        const padding = 4;
+        
+        d3.select(this.parentNode)
+          .insert('rect', 'text')
+          .attr('x', bbox.x - padding)
+          .attr('y', bbox.y - padding)
+          .attr('width', bbox.width + 2 * padding)
+          .attr('height', bbox.height + 2 * padding)
+          .style('fill', 'white')
+          .style('opacity', 0.8);
+      });
 
     function dragstarted(event, d) {
       d3.select(this).raise().classed('active', true);
