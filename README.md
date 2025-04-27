@@ -61,3 +61,42 @@ Darker shades highlight countries where stress levels are more severe within the
 Overall, the findings highlight that while formal professional sectors like business, corporate jobs, and student populations are heavily affected by stress, mental health awareness is necessary across all occupations to address hidden or emerging stress patterns globally.
 
 https://github.com/user-attachments/assets/4721824f-c463-48a1-baa1-19ba7d850a9c
+
+### 📊 Pie Chart: Growing Stress vs Staying Indoors
+
+Use our interactive pie chart to explore the relationship between the amount of time spent indoors and feelings of growing stress. A dropdown menu allows users to select different periods of staying indoors, such as **1–14 days**, **15–30 days**, **31–60 days**, **more than 2 months**, or **going out every day**. Based on the selected timeframe, the pie chart dynamically updates to reflect the distribution of stress responses.
+
+The pie chart is divided into three sections:
+- **Yes** (growing stress)
+- **No** (no growing stress)
+- **Maybe** (unsure about stress)
+
+Each slice represents the percentage of individuals falling into each response group. Color coding is applied to distinguish the categories clearly: **Green** represents "Yes" **Red** represents "No" **Blue** represents "Maybe"
+
+Larger slices indicate a higher proportion of people selecting that response, making it easy to understand how indoor confinement impacts mental health across different durations.
+
+Overall, the data highlights that extended periods indoors significantly contribute to mental stress, while regular outdoor activity appears to help in reducing or managing these effects. 
+
+https://github.com/user-attachments/assets/4a468458-ba02-418d-a3b3-d94833637eab
+
+### 📊 Clustered Bar Chart: Coping Struggles, Work Interest, and Social Weakness
+
+Use our interactive clustered bar chart to explore how individuals with different mental health histories manage coping struggles, work interest, and social weaknesses. From the dropdown menu titled **Mental Health History**, select an option such as **"Yes"**, **"No"**, or **"Maybe"**. Based on the selected option, the bar chart dynamically updates to display the corresponding data.
+
+The **X-axis** represents three coping factors:
+- **Coping_Struggles**
+- **Work_Interest**
+- **Social_Weakness**
+
+The **Y-axis** shows the number of individuals, ranging from **0 to 60,000**. Each coping factor displays two bars: one for individuals who answered "Yes" and one for those who answered "No," with **orange** representing "Yes" responses and **blue** representing "No" responses.
+
+This visualization provides a clear side-by-side comparison, making it easy to understand how mental health history impacts coping abilities and social engagement across different groups.
+
+Overall, the findings highlight that mental health support and interventions should be made available not only to those who seek help but also to broader populations, including those who may not realize they are struggling. 
+
+
+https://github.com/user-attachments/assets/83adc1a3-c72a-4645-b2d5-40daa0e6ccea
+
+
+ 
+
