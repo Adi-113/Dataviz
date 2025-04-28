@@ -1,20 +1,127 @@
-header {
-  text-align: center;
-  padding: 20px 0 0;
+body {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffbd7b;
 }
 .controls {
   position: absolute;
-  top: 20px;
+  top: -30px;
   left: 20px;
   background-color: rgba(255, 255, 255, 0.95);
-  padding: 10px;
-  border-radius: 6px;
+  padding: 4px 8px;
+  border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 10;
+  font-size: 13px;
+}
+.controls label {
+  font-size: 15px;
 }
 select {
-  padding: 8px;
-  font-size: 14px;
+  padding: 4px;
+  font-size: 13px;
   border-radius: 4px;
   border: 1px solid #aaa;
+}
+
+header {
+  background: #ffa955;
+  color: rgb(255, 255, 255);
+  padding: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: larger;
+  font-family: cursive;
+  font-weight: bold;
+}
+
+#chloromap {
+  margin: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px grey;
+}
+#sankey {
+  margin: 20px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px rgb(53, 51, 51);
+  align-items: center;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+#sankey h1 {
+  text-align: center;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: space-evenly;
+  
+}
+
+.dashboard-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.small-chart {
+  flex: 1 1 30%;
+  min-width: 300px;
+  box-shadow: 10px 10px 5px grey;
+}
+
+.large-chart {
+  flex: 2 1 60%;
+  min-width: 600px;
+  box-shadow: 10px 10px 5px grey;
+}
+
+.chart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+}
+
+#pie, #bar {
+  max-width: 100%;
+  height: auto;
+}
+
+#chloromap h1 {
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 10px;
+  margin-left: 0;
+}
+
+.legend {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.legend-bar {
+  margin: 0 auto 2px auto;
+}
+
+#map {
+  display: block;
+  margin-left: 0;
+  margin-right: auto;
 }
